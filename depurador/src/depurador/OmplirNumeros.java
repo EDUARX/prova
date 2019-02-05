@@ -1,5 +1,6 @@
 package depurador;
 
+
 public class OmplirNumeros {
 
 	public static void main(String[] args) {
@@ -8,11 +9,13 @@ public class OmplirNumeros {
 		
 		taula = omplir(n);
 		int suma = sumar(taula);
+		
 		System.out.println("La suma és: "+suma);
 	}
 
 	private static int[] omplir(int n) {
 		int[] tla = new int[n];
+		
 		for (int i=0; i<n; i++) 
 			tla[i]=i*10;
 		return tla;
