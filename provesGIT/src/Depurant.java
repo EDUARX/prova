@@ -12,12 +12,15 @@ public class Depurant {
 		case 1:
 			data = new SimpleDateFormat("yyyy/MM");
 			cad = data.format(dia);
+			break;
 		case 2:
 			data = new SimpleDateFormat("dd/MM/yyyy");
 			cad = data.format(dia);
+			break;
 		case 3:
 			data = new SimpleDateFormat("MM/yy");
 			cad = data.format(dia);
+			break;
 		default:
 			cad = "ERROR";
 		}
@@ -33,14 +36,14 @@ public class Depurant {
 		
 		int max = -999;		
 		for (int i = 0; i < taula.length; i++) {
-			if (taula[i]<max)
+			if (taula[i]>max)
 				max = taula[i];
 		}
 		System.out.println("El màxim és "+max);
 
 		int cont = 0;		
 		for (int i = 0; i < taula.length; i++) {
-			if (taula[i]>=0 || taula[i]<=100)
+			if (taula[i]>=0 && taula[i]<=100)
 				cont++;
 		}
 		System.out.println("Entre 0 i 100 tenim "+cont+" números");
